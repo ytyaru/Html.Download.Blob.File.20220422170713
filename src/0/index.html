@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JSでBLOBを作成しファイルとしてダウンロードする</title>
+    <script src="test1.js"></script>
+    <script>
+    window.addEventListener('load', () => {
+        const button1 = document.getElementById('button1');
+        button1.addEventListener('click', (e)=>{
+            e.preventDefault();
+            downloadFile(new Blob(["やあ！　JSで作成したファイルだよ。"], {type: 'text/plain'}), 'my-text.txt');
+        });
+    });
+    function downloadFile(blob, fileName) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        document.body.appendChild(a);
+        a.download = fileName;
+        a.href = url;
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+    }
+    </script>
+</head>
+<body>
+    <p><button id="button1">ダウンロードする</button></p>
+</body>
+</html>
