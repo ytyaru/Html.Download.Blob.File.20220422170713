@@ -6,11 +6,16 @@
     <script>
     window.addEventListener('DOMContentLoaded', () => {
         selectNewLineByOs();
+        setCaret();
         document.getElementById('download').addEventListener('click', (e)=>{
             e.preventDefault();
             downloadFile(new Blob(createContent(), {type: 'text/plain'}), createName());
         });
     });
+    function setCaret() {
+        const ta = document.getElementById('content');
+        ta.setSelectionRange(ta.value.length, ta.value.length);
+    }
     function selectNewLineByOs() {
         const options = document.getElementById('newline').options;
         const LF = 0;
