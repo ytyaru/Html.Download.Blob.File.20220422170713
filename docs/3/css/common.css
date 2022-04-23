@@ -1,0 +1,19 @@
+@charset "utf-8";
+* {
+    padding: 0;
+    margin: 0;
+}
+body, button, input, select, textarea, label, legend, optgroup, option, output, datalist {
+    background-color: var(--background-color);
+    color: var(--color);
+    border-color: var(--color);
+    font-size: calc(100vw / var(--line-of-chars)); /* writing-mode: vertical-rl;のときはvhにせねばならない。 */
+}
+textarea {
+    width: 100%;
+}
+input[type=checkbox] {
+    width: 1em;
+    height: 1em;
+}
+

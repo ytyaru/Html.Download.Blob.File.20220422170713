@@ -8,10 +8,6 @@
 
 * [デモ](https://ytyaru.github.io/Html.Download.Blob.File.20220422170713/)
 
-# 特徴
-
-* セールスポイント
-
 # 開発環境
 
 * <time datetime="2022-04-22T17:06:52+0900">2022-04-22</time>
@@ -34,7 +30,7 @@ git clone https://github.com/ytyaru/Html.Download.Blob.File.20220422170713
 
 ```sh
 cd Html.Download.Blob.File.20220422170713/src
-./run.sh
+./index.html
 ```
 
 # 注意
