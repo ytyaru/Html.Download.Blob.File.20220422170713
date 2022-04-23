@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JSでBLOBを作成しファイルとしてダウンロードする</title>
+    <script src="js/main.js"></script>
+    <script src="js/clipboard.js"></script>
+    <link href="css/style.css" rel="stylesheet"></script>
+</head>
+<body>
+    <dialog id="help-dialog">
+        <form method="dialog">
+        <div style="display:flex; justify-content:flex-end;">
+            <button id="close-help-dialog" type="submit" style="text-align: right;">❌</button>
+        </div>
+        <section>
+            <h1>これは何？</h1>
+            <p>　このアプリは入力したテキストをファイルに変換してダウンロードします。またはクリップボードにコピーします。<button type="button">⬇</button><button type="button">📋</button></p><br>
+        </section>
+        <section>
+            <h1>ショートカットキー</h1>
+            <p>　テキストエリアにフォーカスがあるとき、次のキーが使用できます。</p><br>
+            <table>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Enter</kbd></td><td>ファイルをダウンロードする。</td><td><button type="button">⬇</button></td></tr>
+            <tr><td><kbd>Shift</kbd>+<kbd>Enter</kbd></td><td>クリップボードにコピーする。</td><td><button type="button">📋</button></td></tr>
+            </table>
+        </section>
+        </form>
+    </dialog>
+    <form id="main-form" method="post">
+        <div>
+            <button id="help" title="これは何？" type="button" >❓</button>
+            <button id="copy" title="クリップボードにコピーする" type="button">📋</button>
+            <button id="download" title="ダウンロードする" type="button">⬇</button>
+            <input type="text" id="name" name="name" value="index.html" title="ファイル名" placeholder="ファイル名" size="8">
+            <!--<label for="bom"><input type="checkbox" id="bom" name="bom" checked>BOM</label>-->
+            <input type="checkbox" id="bom" name="bom" checked>
+            <label for="bom">BOM</label>
+            <select id="newline" name="newline" title="改行コード">
+                <option value="LF">LF</option>
+                <option value="CR">CR</option>
+                <option value="CR-LF">CR-LF</option>
+            </select><br>
+        </div>
+        <div>
+            <textarea id="content" name="content" rows="10" cols="80" placeholder="テキストファイル内容" autofocus>やあ！　JSで作成したファイルだよ。</textarea>
+        </div>
+    </form>
+</body>
+</html>
