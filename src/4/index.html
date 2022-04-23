@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JSでBLOBを作成しファイルとしてダウンロードする</title>
+    <script src="js/main.js"></script>
+    <script src="js/clipboard.js"></script>
+    <link href="css/style.css" rel="stylesheet"></script>
+</head>
+<body>
+    <form method="post">
+        <div>
+            <button id="copy" title="クリップボードにコピーする" type="button">📋</button>
+            <button id="download" title="ダウンロードする" type="button">⬇</button>
+            <input type="text" id="name" name="name" value="index.html" placeholder="ファイル名" size="8"><label><input type="checkbox" id="bom" name="bom" checked>BOM</label><select id="newline" name="newline"><option value="LF">LF</option><option value="CR">CR</option><option value="CR-LF">CR-LF</option></select><br>
+        </div>
+        <div>
+            <textarea id="content" name="content" rows="10" cols="80" placeholder="テキストファイル内容" autofocus>やあ！　JSで作成したファイルだよ。</textarea>
+        </div>
+    </form>
+</body>
+</html>
